@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seashore Hyde Park – North Coast | Ras El Hekma</title>
+<meta name="description" content="Seashore by Hyde Park Developments – Luxury coastal resort in Ras El Hekma, North Coast Egypt. Chalets, villas, townhouses on 240 acres. Call 01274230856.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy: #0a0f1e;
+    --navy-mid: #111827;
+    --navy-light: #1a2540;
+    --blue-deep: #0d2b5e;
+    --blue-mid: #1e4fa8;
+    --blue-accent: #2563eb;
+    --blue-glow: #3b82f6;
+    --gold: #c9a84c;
+    --gold-light: #e2c27d;
+    --white: #ffffff;
+    --off-white: #f5f7fa;
+    --gray-light: #e2e8f0;
+    --gray: #94a3b8;
+    --text-dark: #1e293b;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ===== NAVBAR ===== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(10, 15, 30, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 10px 24px;
+    border-radius: 2px;
+    font-weight: 600 !important;
+    transition: background 0.3s !important;
+  }
+
+  .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom, rgba(10,15,30,0.3) 0%, rgba(10,15,30,0.1) 40%, rgba(10,15,30,0.8) 100%),
+      linear-gradient(135deg, #0a1628 0%, #0d3070 30%, #1565a0 55%, #0a7e9e 75%, #0a4f7e 100%);
+    animation: heroShift 12s ease-in-out infinite alternate;
+  }
+
+  @keyframes heroShift {
+    from { background-position: 0% 50%; }
+    to { background-position: 100% 50%; }
+  }
+
+  .hero-waves {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .hero-waves svg { width: 100%; height: 100%; }
+
+  /* Floating particles */
+  .particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(201, 168, 76, 0.6);
+    border-radius: 50%;
+    animation: float linear infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 0.6; }
+    100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 60px 120px;
+    max-width: 800px;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(201, 168, 76, 0.15);
+    border: 1px solid rgba(201, 168, 76, 0.4);
+    padding: 8px 20px;
+    border-radius: 2px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 28px;
+    animation: fadeUp 1s ease 0.2s both;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 20px; height: 1px;
+    background: var(--gold);
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 8vw, 88px);
+    font-weight: 300;
+    line-height: 1.0;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+    animation: fadeUp 1s ease 0.4s both;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 48px;
+    animation: fadeUp 1s ease 0.6s both;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    animation: fadeUp 1s ease 0.8s both;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 16px 40px;
+    border: none;
+    border-radius: 2px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(201, 168, 76, 0.4);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    padding: 16px 40px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 2px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .hero-stats {
+    position: absolute;
+    right: 60px;
+    bottom: 120px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    animation: fadeLeft 1s ease 1s both;
+  }
+
+  .hero-stat {
+    text-align: right;
+    border-right: 2px solid var(--gold);
+    padding-right: 20px;
+  }
+
+  .hero-stat .num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .hero-stat .label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-top: 4px;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeLeft {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  /* ===== SECTIONS GENERAL ===== */
+  section { position: relative; }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  .section-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .section-tag::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 54px);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+
+  /* ===== ABOUT / OVERVIEW ===== */
+  .about {
+    padding: 120px 0;
+    background: var(--navy-mid);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-left .section-title {
+    margin-bottom: 28px;
+  }
+
+  .about-text {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 40px;
+  }
+
+  .about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .about-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .about-feature-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    background: rgba(201, 168, 76, 0.1);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .about-feature-text h4 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .about-feature-text p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .about-right {
+    position: relative;
+  }
+
+  .about-visual {
+    width: 100%;
+    aspect-ratio: 4/5;
+    background: linear-gradient(135deg, #0a2d6b 0%, #1565a0 40%, #0891b2 70%, #155e75 100%);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .about-visual-inner {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 60%, rgba(255,255,255,0.08) 0%, transparent 60%),
+      linear-gradient(to bottom, transparent 40%, rgba(10,15,30,0.6) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+  }
+
+  .about-visual-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.3;
+  }
+
+  .about-visual-sub {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-top: 8px;
+  }
+
+  /* Floating card on visual */
+  .about-card {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 24px 30px;
+    border-radius: 4px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+
+  .about-card .num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .about-card .label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 4px;
+    opacity: 0.75;
+  }
+
+  /* ===== LOCATION STRIP ===== */
+  .location-strip {
+    background: var(--blue-deep);
+    padding: 24px 0;
+    border-top: 1px solid rgba(201, 168, 76, 0.2);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+  }
+
+  .location-strip-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .loc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .loc-dot {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .loc-text span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .loc-text strong {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+  }
+
+  /* ===== AMENITIES ===== */
+  .amenities {
+    padding: 120px 0;
+    background: var(--navy);
+  }
+
+  .amenities-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 80px;
+  }
+
+  .amenities-header-right p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .amenity-card {
+    background: var(--navy-mid);
+    padding: 40px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+    cursor: default;
+  }
+
+  .amenity-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--gold);
+    transition: width 0.4s ease;
+  }
+
+  .amenity-card:hover { background: var(--navy-light); }
+  .amenity-card:hover::after { width: 100%; }
+
+  .amenity-icon {
+    font-size: 28px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .amenity-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .amenity-card p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.55);
+  }
+
+  /* ===== UNIT TYPES ===== */
+  .units {
+    padding: 120px 0;
+    background: var(--navy-mid);
+  }
+
+  .units-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .units-header .section-tag { justify-content: center; }
+  .units-header .section-tag::before { display: none; }
+
+  .units-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .unit-card {
+    background: var(--navy);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .unit-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    border-color: rgba(201, 168, 76, 0.3);
+  }
+
+  .unit-card-visual {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .unit-card-visual-bg {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.5s ease;
+  }
+
+  .unit-card:hover .unit-card-visual-bg { transform: scale(1.05); }
+
+  .unit-card-visual-bg.chalet {
+    background: linear-gradient(135deg, #0c3b75 0%, #1565a0 50%, #0e7490 100%);
+  }
+
+  .unit-card-visual-bg.villa {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #1e40af 100%);
+  }
+
+  .unit-card-visual-bg.townhouse {
+    background: linear-gradient(135deg, #0f2a50 0%, #1d4ed8 50%, #0284c7 100%);
+  }
+
+  .unit-card-visual-bg.duplex {
+    background: linear-gradient(135deg, #0a1e3d 0%, #1e3a8a 50%, #1e40af 100%);
+  }
+
+  .unit-card-visual-bg.studio {
+    background: linear-gradient(135deg, #0e2d5c 0%, #2563eb 50%, #06b6d4 100%);
+  }
+
+  .unit-card-visual-bg.apt {
+    background: linear-gradient(135deg, #0a2542 0%, #155e75 50%, #0284c7 100%);
+  }
+
+  .unit-badge {
+    position: absolute;
+    top: 20px; right: 20px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 2px;
+  }
+
+  .unit-card-body {
+    padding: 28px;
+  }
+
+  .unit-card-body h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .unit-area {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 20px;
+  }
+
+  .unit-price {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .unit-price-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .unit-price-val {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--gold-light);
+  }
+
+  .unit-price-curr {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .unit-features {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .unit-feat {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .unit-feat::before {
+    content: '✓';
+    color: var(--gold);
+    font-size: 10px;
+  }
+
+  /* ===== PAYMENT PLAN ===== */
+  .payment {
+    padding: 100px 0;
+    background: var(--blue-deep);
+    border-top: 1px solid rgba(201, 168, 76, 0.2);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+  }
+
+  .payment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .payment-left .section-title { margin-bottom: 24px; }
+  .payment-left p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 40px;
+  }
+
+  .payment-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .payment-step {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+
+  .payment-step:hover { border-color: rgba(201, 168, 76, 0.4); }
+
+  .step-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--gold);
+    min-width: 60px;
+  }
+
+  .step-text h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .step-text p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .payment-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .payment-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    border-radius: 4px;
+    padding: 32px 28px;
+    text-align: center;
+  }
+
+  .payment-card.highlight {
+    background: var(--gold);
+    border-color: var(--gold);
+    grid-column: span 2;
+  }
+
+  .payment-card.highlight * { color: var(--navy) !important; }
+
+  .payment-card .big-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .payment-card.highlight .big-num {
+    font-size: 64px;
+    color: var(--navy);
+  }
+
+  .payment-card .small-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ===== LOCATION ===== */
+  .location {
+    padding: 120px 0;
+    background: var(--navy);
+  }
+
+  .location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .location-map-placeholder {
+    aspect-ratio: 1;
+    background: var(--navy-light);
+    border-radius: 4px;
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .map-visual {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 70%),
+      linear-gradient(135deg, #0a1628 0%, #0c2156 100%);
+  }
+
+  /* Simple map dots */
+  .map-dot {
+    position: absolute;
+    width: 12px; height: 12px;
+    background: var(--gold);
+    border-radius: 50%;
+    border: 2px solid var(--navy);
+    box-shadow: 0 0 0 6px rgba(201, 168, 76, 0.25);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  .map-dot-label {
+    position: absolute;
+    transform: translate(-50%, -140%);
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 6px rgba(201, 168, 76, 0.25); }
+    50% { box-shadow: 0 0 0 12px rgba(201, 168, 76, 0.1); }
+  }
+
+  .location-distances {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .distance-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+
+  .distance-item:hover { border-color: rgba(201, 168, 76, 0.3); }
+
+  .distance-icon {
+    font-size: 18px;
+    width: 36px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .distance-info { flex: 1; }
+  .distance-info h4 { font-size: 14px; font-weight: 500; margin-bottom: 2px; }
+  .distance-info p { font-size: 12px; color: rgba(255,255,255,0.45); }
+
+  .distance-km {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--gold);
+  }
+
+  /* ===== DEVELOPER ===== */
+  .developer {
+    padding: 100px 0;
+    background: var(--navy-mid);
+    text-align: center;
+  }
+
+  .developer .section-tag { justify-content: center; }
+  .developer .section-tag::before { display: none; }
+  .developer .section-title { margin-bottom: 24px; }
+
+  .developer-text {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .developer-projects {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .dev-project {
+    background: var(--navy);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 16px 28px;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: rgba(255,255,255,0.7);
+    transition: all 0.3s;
+  }
+
+  .dev-project:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  /* ===== CONTACT ===== */
+  .contact {
+    padding: 120px 0;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-left .section-title { margin-bottom: 24px; }
+  .contact-left > p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 40px;
+  }
+
+  .contact-info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .contact-info-item .icon {
+    width: 44px; height: 44px;
+    background: rgba(201, 168, 76, 0.1);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .contact-info-item .detail h4 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 4px;
+  }
+
+  .contact-info-item .detail a,
+  .contact-info-item .detail p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+    margin: 0;
+  }
+
+  .contact-info-item .detail a:hover { color: var(--gold); }
+
+  .contact-form {
+    background: var(--navy-mid);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    padding: 48px 40px;
+  }
+
+  .contact-form h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 32px;
+    color: var(--white);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 8px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 2px;
+    padding: 14px 18px;
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    transition: border-color 0.3s;
+    outline: none;
+    appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--gold);
+  }
+
+  .form-group select option { background: var(--navy-mid); color: var(--white); }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-submit {
+    width: 100%;
+    margin-top: 8px;
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 16px;
+    border-radius: 2px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .form-submit:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(201, 168, 76, 0.35);
+  }
+
+  /* ===== FLOATING CTA ===== */
+  .floating-cta {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+  }
+
+  .float-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 14px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 8px 30px rgba(201, 168, 76, 0.4);
+    transition: all 0.3s;
+    animation: floatIn 0.5s ease 2s both;
+  }
+
+  .float-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 40px rgba(201, 168, 76, 0.5);
+    background: var(--gold-light);
+  }
+
+  .float-btn.whatsapp {
+    background: #25d366;
+    color: white;
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+  }
+
+  .float-btn.whatsapp:hover {
+    box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+    background: #20bf5c;
+  }
+
+  @keyframes floatIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #050810;
+    padding: 60px 0 30px;
+    border-top: 1px solid rgba(201, 168, 76, 0.15);
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+
+  .footer-brand p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.45);
+    margin-top: 16px;
+    max-width: 260px;
+  }
+
+  .footer-col h4 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-col ul a {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-col ul a:hover { color: var(--gold-light); }
+
+  .footer-bottom {
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .footer-bottom a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+  }
+
+  .footer-bottom a:hover { color: var(--gold); }
+
+  /* ===== SCROLL ANIMATIONS ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    nav { padding: 18px 30px; }
+    .section-inner { padding: 0 30px; }
+    .about-grid,
+    .payment-grid,
+    .location-grid,
+    .contact-grid { grid-template-columns: 1fr; gap: 50px; }
+    .amenities-grid { grid-template-columns: repeat(2, 1fr); }
+    .units-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-stats { display: none; }
+    .hero-content { padding: 0 30px 100px; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .footer-inner { padding: 0 30px; }
+  }
+
+  @media (max-width: 640px) {
+    nav { padding: 15px 20px; }
+    .nav-links { display: none; }
+    .section-inner { padding: 0 20px; }
+    .hero-content { padding: 0 20px 80px; }
+    .amenities-grid { grid-template-columns: 1fr; }
+    .units-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; gap: 40px; }
+    .footer-inner { padding: 0 20px; }
+    .about-card { display: none; }
+    .location-strip-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">SEASHORE <span>NORTH COAST</span></a>
+  <ul class="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#amenities">Amenities</a></li>
+    <li><a href="#units">Units</a></li>
+    <li><a href="#payment">Payment</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#contact" class="nav-cta">Enquire Now</a></li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="particles" id="particles"></div>
+
+  <div class="hero-waves">
+    <svg viewBox="0 0 1440 200" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 160 C360 80 720 200 1080 100 C1260 50 1380 120 1440 140 L1440 200 L0 200 Z" fill="rgba(10,15,30,0.6)"/>
+      <path d="M0 180 C240 120 480 200 720 160 C960 120 1200 180 1440 160 L1440 200 L0 200 Z" fill="#0a0f1e"/>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge">Hyde Park Developments · Ras El Hekma</div>
+    <h1>Where the <em>Sea</em><br>Meets<br>Luxury</h1>
+    <p class="hero-subtitle">Seashore – a masterpiece coastal resort spanning 240 acres on Egypt's North Coast. Designed by EDSA & SB Architects, inspired by the finest coastal living in the world.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Book a Unit</a>
+      <a href="#units" class="btn-outline">Explore Units</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="num">240</div>
+      <div class="label">Acres Total Area</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">550m</div>
+      <div class="label">Private Beach</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">25+</div>
+      <div class="label">Swimming Pools</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOCATION STRIP ===== -->
+<div class="location-strip">
+  <div class="location-strip-inner">
+    <div class="loc-item">
+      <div class="loc-dot"></div>
+      <div class="loc-text">
+        <span>Location</span>
+        <strong>Km 210, Ras El Hekma, North Coast</strong>
+      </div>
+    </div>
+    <div class="loc-item">
+      <div class="loc-dot"></div>
+      <div class="loc-text">
+        <span>Distance from Cairo</span>
+        <strong>Only 3.5 Hours</strong>
+      </div>
+    </div>
+    <div class="loc-item">
+      <div class="loc-dot"></div>
+      <div class="loc-text">
+        <span>Starting Price</span>
+        <strong>From 9,200,000 EGP</strong>
+      </div>
+    </div>
+    <div class="loc-item">
+      <div class="loc-dot"></div>
+      <div class="loc-text">
+        <span>Down Payment</span>
+        <strong>Only 5% Down</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="overview">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <div class="section-tag">About Seashore</div>
+        <h2 class="section-title">Egypt's Premier<br>Mediterranean Resort</h2>
+        <p class="about-text">Seashore by Hyde Park Developments is a world-class coastal resort on the Mediterranean Sea in Ras El Hekma, North Coast. Designed by globally renowned architects EDSA and SB Architects of Florida, the resort blends avant-garde architecture with the emerald waters and lush greenery of Egypt's finest coastline. With 90% of units enjoying direct sea views, Seashore is not just a resort – it's a lifestyle.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon">🏖️</div>
+            <div class="about-feature-text">
+              <h4>550m Private Beach</h4>
+              <p>Direct Mediterranean access</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">🏊</div>
+            <div class="about-feature-text">
+              <h4>25+ Swimming Pools</h4>
+              <p>Beach-entry design, 400m²+</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">🌿</div>
+            <div class="about-feature-text">
+              <h4>Lush Green Spaces</h4>
+              <p>Palm parks & open oases</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">⭐</div>
+            <div class="about-feature-text">
+              <h4>5-Star Hotel</h4>
+              <p>On-site luxury hospitality</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">🔒</div>
+            <div class="about-feature-text">
+              <h4>24/7 Security</h4>
+              <p>3 electronic gates & CCTV</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">🏪</div>
+            <div class="about-feature-text">
+              <h4>Commercial Strip</h4>
+              <p>10,000 m² of retail & dining</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-right reveal">
+        <div class="about-visual">
+          <div class="about-visual-inner">
+            <div class="about-visual-label">"Where architecture<br>meets the horizon"</div>
+            <div class="about-visual-sub">Designed by EDSA & SB Architects, Florida</div>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="num">1,850</div>
+          <div class="label">Residential Units</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AMENITIES ===== -->
+<section class="amenities" id="amenities">
+  <div class="section-inner">
+    <div class="amenities-header reveal">
+      <div>
+        <div class="section-tag">World-Class Amenities</div>
+        <h2 class="section-title">Everything You<br>Could Ever Need</h2>
+      </div>
+      <div class="amenities-header-right">
+        <p>Seashore is a fully integrated resort designed to deliver an unparalleled coastal lifestyle. Every amenity has been carefully curated to ensure residents enjoy the highest standard of living, entertainment, and relaxation year-round.</p>
+      </div>
+    </div>
+
+    <div class="amenities-grid reveal">
+      <div class="amenity-card">
+        <span class="amenity-icon">🏖️</span>
+        <h3>Private Beach</h3>
+        <p>A 550-meter pristine Mediterranean beach with beach cabanas, water sports, kayaking, paddleboarding, and seaside lounging.</p>
+      </div>
+      <div class="amenity-card">
+        <span class="amenity-icon">🏊‍♂️</span>
+        <h3>25+ Swimming Pools</h3>
+        <p>Beach-entry pools across the resort, some starting at 400 square meters, with plateau seating and chaise lounges.</p>
+      </div>
+      <div class="amenity-card">
+        <span class="amenity-icon">🏨</span>
+        <h3>5-Star Beach Hotel</h3>
+        <p>A luxury beach hotel and serviced residences offering top-tier hospitality services for residents and guests.</p>
+      </div>
+      <div class="amenity-card">
+        <span class="amenity-icon">🍽️</span>
+        <h3>Gourmet Restaurants</h3>
+        <p>Open-air beachfront restaurants, boutique stores, cafés, and snack bars. Fine dining right on the Mediterranean.</p>
+      </div>
+      <div class="amenity-card">
+        <span class="amenity-icon">🎾</span>
+        <h3>Sports Facilities</h3>
+        <p>Tennis courts, volleyball, beach volleyball, and basketball courts to keep you active all season long.</p>
+      </div>
+      <div class="amenity-card">
+        <span class="amenity-icon">🏛️</span>
+        <h3>Premium Clubhouse</h3>
+        <p>Indoor and outdoor terraces, cafeteria, snack bar, and children's playground – the social heart of Seashore.</p>
+      </div>
+      <div class="amenity-card">
+        <span class="amenity-icon">🌊</span>
+        <h3>Swimmable Lagoons</h3>
+        <p>Over 2,200 m² of crystal-clear artificial lagoons and water bodies integrated throughout the resort's landscape.</p>
+      </div>
+      <div class="amenity-card">
+        <span class="amenity-icon">🕌</span>
+        <h3>Mosque & Community</h3>
+        <p>A beautifully designed mosque with contemporary Islamic architecture, serving the spiritual needs of residents.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== UNIT TYPES ===== -->
+<section class="units" id="units">
+  <div class="section-inner">
+    <div class="units-header reveal">
+      <div class="section-tag">Available Units</div>
+      <h2 class="section-title">Choose Your<br>Perfect Home</h2>
+      <p style="font-size:15px; font-weight:300; color:rgba(255,255,255,0.6); max-width:600px; margin:16px auto 0; line-height:1.8;">All units are delivered fully finished. 90% of all units enjoy direct sea views. From intimate studios to expansive standalone villas.</p>
+    </div>
+
+    <div class="units-grid reveal">
+      <div class="unit-card">
+        <div class="unit-card-visual">
+          <div class="unit-card-visual-bg chalet"></div>
+          <div class="unit-badge">Best Seller</div>
+        </div>
+        <div class="unit-card-body">
+          <h3>Beach Chalet</h3>
+          <p class="unit-area">From 67 m² up to 110 m²</p>
+          <div class="unit-price">
+            <span class="unit-price-label">Starting from</span>
+            <span class="unit-price-val">13,090,000</span>
+            <span class="unit-price-curr">EGP</span>
+          </div>
+          <div class="unit-features">
+            <span class="unit-feat">Sea View</span>
+            <span class="unit-feat">Fully Finished</span>
+            <span class="unit-feat">Beach Access</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="unit-card">
+        <div class="unit-card-visual">
+          <div class="unit-card-visual-bg villa"></div>
+          <div class="unit-badge">Luxury</div>
+        </div>
+        <div class="unit-card-body">
+          <h3>Standalone Villa</h3>
+          <p class="unit-area">From 375 m² up to 600 m²</p>
+          <div class="unit-price">
+            <span class="unit-price-label">Starting from</span>
+            <span class="unit-price-val">38,100,000</span>
+            <span class="unit-price-curr">EGP</span>
+          </div>
+          <div class="unit-features">
+            <span class="unit-feat">Private Pool</span>
+            <span class="unit-feat">Sea View</span>
+            <span class="unit-feat">Garden</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="unit-card">
+        <div class="unit-card-visual">
+          <div class="unit-card-visual-bg townhouse"></div>
+        </div>
+        <div class="unit-card-body">
+          <h3>Townhouse</h3>
+          <p class="unit-area">From 168 m² up to 360 m²</p>
+          <div class="unit-price">
+            <span class="unit-price-label">Starting from</span>
+            <span class="unit-price-val">9,260,000</span>
+            <span class="unit-price-curr">EGP</span>
+          </div>
+          <div class="unit-features">
+            <span class="unit-feat">Sea View</span>
+            <span class="unit-feat">Fully Finished</span>
+            <span class="unit-feat">Terrace</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="unit-card">
+        <div class="unit-card-visual">
+          <div class="unit-card-visual-bg duplex"></div>
+        </div>
+        <div class="unit-card-body">
+          <h3>Chalet Duplex</h3>
+          <p class="unit-area">From 132 m²</p>
+          <div class="unit-price">
+            <span class="unit-price-label">Starting from</span>
+            <span class="unit-price-val">16,000,000</span>
+            <span class="unit-price-curr">EGP</span>
+          </div>
+          <div class="unit-features">
+            <span class="unit-feat">Double Floor</span>
+            <span class="unit-feat">Sea View</span>
+            <span class="unit-feat">Premium</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="unit-card">
+        <div class="unit-card-visual">
+          <div class="unit-card-visual-bg studio"></div>
+        </div>
+        <div class="unit-card-body">
+          <h3>Studio / Apartment</h3>
+          <p class="unit-area">From 65 m² up to 77 m²</p>
+          <div class="unit-price">
+            <span class="unit-price-label">Starting from</span>
+            <span class="unit-price-val">7,320,000</span>
+            <span class="unit-price-curr">EGP</span>
+          </div>
+          <div class="unit-features">
+            <span class="unit-feat">Sea View</span>
+            <span class="unit-feat">Serviced Option</span>
+            <span class="unit-feat">Compact</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="unit-card">
+        <div class="unit-card-visual">
+          <div class="unit-card-visual-bg apt"></div>
+          <div class="unit-badge">Twin House</div>
+        </div>
+        <div class="unit-card-body">
+          <h3>Twin House</h3>
+          <p class="unit-area">From 188 m² up to 470 m²</p>
+          <div class="unit-price">
+            <span class="unit-price-label">Starting from</span>
+            <span class="unit-price-val">16,000,000</span>
+            <span class="unit-price-curr">EGP</span>
+          </div>
+          <div class="unit-features">
+            <span class="unit-feat">Sea View</span>
+            <span class="unit-feat">Fully Finished</span>
+            <span class="unit-feat">Private Entrance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAYMENT ===== -->
+<section class="payment" id="payment">
+  <div class="section-inner">
+    <div class="payment-grid">
+      <div class="payment-left reveal">
+        <div class="section-tag">Flexible Payment</div>
+        <h2 class="section-title">Easy &amp;<br>Flexible Plans</h2>
+        <p>Hyde Park Developments makes owning your dream coastal property easier than ever with industry-leading payment flexibility. Secure your unit with just 5% down payment and spread the rest over 8 years.</p>
+
+        <div class="payment-steps">
+          <div class="payment-step">
+            <div class="step-num">01</div>
+            <div class="step-text">
+              <h4>Choose Your Unit</h4>
+              <p>Select from chalets, villas, townhouses, or apartments</p>
+            </div>
+          </div>
+          <div class="payment-step">
+            <div class="step-num">02</div>
+            <div class="step-text">
+              <h4>Pay 5% Down Payment</h4>
+              <p>Secure your unit with minimal upfront investment</p>
+            </div>
+          </div>
+          <div class="payment-step">
+            <div class="step-num">03</div>
+            <div class="step-text">
+              <h4>Installments Over 8 Years</h4>
+              <p>Equally distributed payments with no hidden fees</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="payment-right reveal">
+        <div class="payment-card highlight">
+          <div class="big-num">5%</div>
+          <div class="small-label">Down Payment Only</div>
+        </div>
+        <div class="payment-card">
+          <div class="big-num">8</div>
+          <div class="small-label">Years Installment</div>
+        </div>
+        <div class="payment-card">
+          <div class="big-num">0%</div>
+          <div class="small-label">Interest Rate</div>
+        </div>
+        <div class="payment-card">
+          <div class="big-num">100%</div>
+          <div class="small-label">Fully Finished</div>
+        </div>
+        <div class="payment-card" style="grid-column:span 2; text-align:left; display:flex; align-items:center; gap:20px;">
+          <div style="font-size:32px;">📞</div>
+          <div>
+            <div class="small-label" style="margin-bottom:6px;">Call Now for Best Prices</div>
+            <a href="tel:+201274230856" style="font-family:'Barlow Condensed'; font-size:26px; font-weight:700; color:var(--gold-light); text-decoration:none; letter-spacing:1px;">01274230856</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOCATION ===== -->
+<section class="location" id="location">
+  <div class="section-inner">
+    <div class="location-grid">
+      <div class="location-left reveal">
+        <div class="section-tag">Prime Location</div>
+        <h2 class="section-title">At the Heart of<br>Ras El Hekma</h2>
+        <p style="font-size:15px; font-weight:300; line-height:1.8; color:rgba(255,255,255,0.65); margin:20px 0 32px;">Strategically positioned at Kilometer 210 on the Alexandria–Marsa Matrouh Desert Road, Seashore is connected to Egypt's most important coastal landmarks and road networks. Just 3.5 hours from Cairo.</p>
+
+        <div class="location-distances">
+          <div class="distance-item">
+            <div class="distance-icon">🏙️</div>
+            <div class="distance-info">
+              <h4>Cairo City</h4>
+              <p>Via Alexandria Desert Road</p>
+            </div>
+            <div class="distance-km">3.5 hrs</div>
+          </div>
+          <div class="distance-item">
+            <div class="distance-icon">✈️</div>
+            <div class="distance-info">
+              <h4>El Alamein International Airport</h4>
+              <p>Nearest airport</p>
+            </div>
+            <div class="distance-km">68 km</div>
+          </div>
+          <div class="distance-item">
+            <div class="distance-icon">🛣️</div>
+            <div class="distance-info">
+              <h4>New Fouka Road</h4>
+              <p>Main artery road</p>
+            </div>
+            <div class="distance-km">3 km</div>
+          </div>
+          <div class="distance-item">
+            <div class="distance-icon">🏖️</div>
+            <div class="distance-info">
+              <h4>Sidi Abdel Rahman</h4>
+              <p>Coastal landmark area</p>
+            </div>
+            <div class="distance-km">79 km</div>
+          </div>
+          <div class="distance-item">
+            <div class="distance-icon">🌊</div>
+            <div class="distance-info">
+              <h4>Marsa Matrouh</h4>
+              <p>Coastal city</p>
+            </div>
+            <div class="distance-km">82 km</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="location-right reveal">
+        <div class="location-map-placeholder">
+          <div class="map-visual"></div>
+          <!-- SVG Map Representation -->
+          <svg viewBox="0 0 400 400" style="position:absolute;inset:0;width:100%;height:100%;" xmlns="http://www.w3.org/2000/svg">
+            <!-- Mediterranean Sea label -->
+            <text x="200" y="80" text-anchor="middle" fill="rgba(147,197,253,0.5)" font-family="Barlow, sans-serif" font-size="13" font-weight="300" letter-spacing="4">MEDITERRANEAN SEA</text>
+            <!-- Coastline -->
+            <path d="M 30 100 Q 100 80 200 90 Q 300 100 370 85" stroke="rgba(147,197,253,0.3)" stroke-width="1.5" fill="none" stroke-dasharray="4,4"/>
+            <!-- Road line -->
+            <line x1="30" y1="240" x2="370" y2="240" stroke="rgba(255,255,255,0.15)" stroke-width="2" stroke-dasharray="8,4"/>
+            <text x="200" y="258" text-anchor="middle" fill="rgba(255,255,255,0.25)" font-family="Barlow, sans-serif" font-size="10" letter-spacing="2">ALEX – MATROUH ROAD</text>
+            <!-- Seashore dot -->
+            <circle cx="200" cy="165" r="8" fill="#c9a84c" opacity="0.9"/>
+            <circle cx="200" cy="165" r="16" fill="#c9a84c" opacity="0.2"/>
+            <circle cx="200" cy="165" r="24" fill="#c9a84c" opacity="0.08"/>
+            <!-- Label box -->
+            <rect x="150" y="125" width="100" height="28" rx="2" fill="#c9a84c"/>
+            <text x="200" y="143" text-anchor="middle" fill="#0a0f1e" font-family="Barlow, sans-serif" font-size="10" font-weight="700" letter-spacing="1">SEASHORE</text>
+            <!-- Km marker -->
+            <text x="200" y="200" text-anchor="middle" fill="rgba(201,168,76,0.7)" font-family="Barlow Condensed, sans-serif" font-size="12" font-weight="600">KM 210</text>
+            <!-- Cairo direction -->
+            <text x="50" y="280" fill="rgba(255,255,255,0.3)" font-family="Barlow, sans-serif" font-size="10" letter-spacing="1">← CAIRO</text>
+            <!-- Marsa Matrouh -->
+            <text x="290" y="280" fill="rgba(255,255,255,0.3)" font-family="Barlow, sans-serif" font-size="10" letter-spacing="1">MATROUH →</text>
+            <!-- Ras El Hekma label -->
+            <text x="200" y="330" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="Cormorant Garamond, serif" font-size="16" font-style="italic">Ras El Hekma Bay</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DEVELOPER ===== -->
+<section class="developer">
+  <div class="section-inner">
+    <div class="section-tag">The Developer</div>
+    <h2 class="section-title">Hyde Park<br>Developments</h2>
+    <p class="developer-text">Founded in 2007, Hyde Park Developments is one of the leading real estate developers in Egypt and the Arab world. With a portfolio of award-winning integrated communities, the company is committed to delivering premium living experiences that combine luxury, sustainability, and innovation.</p>
+    <div class="developer-projects">
+      <div class="dev-project">Hyde Park New Cairo</div>
+      <div class="dev-project">Garden Lakes – October</div>
+      <div class="dev-project">Tawny – 6th October</div>
+      <div class="dev-project">Business District – New Capital</div>
+      <div class="dev-project">Hyde Park North Coast</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <div class="section-tag">Contact Us</div>
+        <h2 class="section-title">Own Your Dream<br>Coastal Home</h2>
+        <p>Get in touch with our sales team today. We'll help you find the perfect unit at Seashore and guide you through every step of the purchase process.</p>
+
+        <div class="contact-info-items">
+          <div class="contact-info-item">
+            <div class="icon">📞</div>
+            <div class="detail">
+              <h4>Call / WhatsApp</h4>
+              <a href="tel:+201274230856">01274230856</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon">💬</div>
+            <div class="detail">
+              <h4>WhatsApp Chat</h4>
+              <a href="https://wa.me/201274230856?text=I'm interested in Seashore Hyde Park North Coast" target="_blank">Send us a message</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon">📍</div>
+            <div class="detail">
+              <h4>Project Location</h4>
+              <p>Km 210, Ras El Hekma, North Coast, Egypt</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon">🕐</div>
+            <div class="detail">
+              <h4>Working Hours</h4>
+              <p>Daily: 9:00 AM – 10:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form reveal">
+        <h3>Request a Free Consultation</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="01XXXXXXXXX">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label>Unit Type</label>
+          <select>
+            <option value="">Select unit type...</option>
+            <option>Beach Chalet (67–110 m²)</option>
+            <option>Standalone Villa (375–600 m²)</option>
+            <option>Townhouse (168–360 m²)</option>
+            <option>Chalet Duplex (132 m²)</option>
+            <option>Twin House (188–470 m²)</option>
+            <option>Studio / Apartment (65–77 m²)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Your Message</label>
+          <textarea placeholder="Tell us about your needs..."></textarea>
+        </div>
+        <button class="form-submit" onclick="handleSubmit(event)">Send Enquiry →</button>
+        <p style="font-size:12px; color:rgba(255,255,255,0.3); text-align:center; margin-top:16px;">Our team will contact you within 24 hours</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="font-family:'Cormorant Garamond', serif; font-size:20px; font-weight:500; letter-spacing:2px; color:white;">SEASHORE <span style="color:var(--gold)">NORTH COAST</span></div>
+        <p>A Hyde Park Developments masterpiece. Luxury coastal living on Egypt's Mediterranean coastline at Ras El Hekma.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#units">Unit Types</a></li>
+          <li><a href="#payment">Payment Plan</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Unit Types</h4>
+        <ul>
+          <li><a href="#units">Beach Chalets</a></li>
+          <li><a href="#units">Standalone Villas</a></li>
+          <li><a href="#units">Townhouses</a></li>
+          <li><a href="#units">Twin Houses</a></li>
+          <li><a href="#units">Chalet Duplexes</a></li>
+          <li><a href="#units">Studios & Apartments</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+201274230856">📞 01274230856</a></li>
+          <li><a href="https://wa.me/201274230856" target="_blank">💬 WhatsApp</a></li>
+          <li><a href="#location">📍 Km 210, Ras El Hekma</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Seashore North Coast by Hyde Park Developments. All rights reserved.</p>
+      <p><a href="tel:+201274230856">Sales: 01274230856</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOATING CTA ===== -->
+<div class="floating-cta">
+  <a href="https://wa.me/201274230856?text=I'm interested in Seashore Hyde Park North Coast" target="_blank" class="float-btn whatsapp">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp Us
+  </a>
+  <a href="tel:+201274230856" class="float-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    01274230856
+  </a>
+</div>
+
+<script>
+  // Particle generation
+  const container = document.getElementById('particles');
+  for (let i = 0; i < 20; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.cssText = `
+      left: ${Math.random() * 100}%;
+      animation-duration: ${6 + Math.random() * 10}s;
+      animation-delay: ${Math.random() * 8}s;
+      width: ${1 + Math.random() * 3}px;
+      height: ${1 + Math.random() * 3}px;
+    `;
+    container.appendChild(p);
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(el => observer.observe(el));
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 80) {
+      nav.style.background = 'rgba(10,15,30,0.97)';
+      nav.style.borderBottomColor = 'rgba(201,168,76,0.35)';
+    } else {
+      nav.style.background = 'rgba(10,15,30,0.85)';
+      nav.style.borderBottomColor = 'rgba(201,168,76,0.2)';
+    }
+  });
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target;
+    btn.textContent = '✓ Message Sent!';
+    btn.style.background = '#059669';
+    btn.style.color = '#fff';
+    setTimeout(() => {
+      btn.textContent = 'Send Enquiry →';
+      btn.style.background = '';
+      btn.style.color = '';
+    }, 3000);
+  }
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
